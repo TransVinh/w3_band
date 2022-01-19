@@ -1,0 +1,122 @@
+/* 
+    PC: >= 1024px
+    Tablet: >= 740px & < 1024px
+    Mobile: < 740px
+*/
+
+/* PC */
+@media (min-width: 1024px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+    .btn {
+        padding: 14px 20px;
+    }
+    .contact-info {
+        line-height: 2;
+    } 
+    .form-control {
+        padding: 14px 8px;
+        font-size: 16px;
+    }
+    .contact-submit-btn {
+        font-size: 18px;
+    }
+    #footer .social-list a {
+        font-size: 28px;
+        margin: 0 8px;
+    }
+    #footer .copyright a {
+        padding: 8px 2px;
+        display: inline-block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }  
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+    .s-full-width,
+    .s-col-full {
+        width: 100%!important;
+    }
+    .mt-24 {
+        margin-top: 24px!important;
+    }
+    .s-mt-8 {
+        margin-top: 8px!important;
+    }
+    .s-mt-32 {
+        margin-top: 32px!important;
+    }
+    #header {
+        overflow: hidden;
+    }
+    .nav > li {
+        display: block;
+    }
+    .mobile-menu-btn {
+        float: right;
+        padding: 0 20px;
+        color: #fff;
+    }
+    .mobile-menu-btn-icon {
+        color: #fff;
+        font-size: 18px;
+        line-height: 49px;
+    }
+    .mobile-menu-btn:hover {
+        background: #ccc;
+    }
+    .mobile-menu-btn:hover .mobile-menu-btn-icon {
+        color: #000;
+    }
+    .nav, .nav > li:not(:first-child) > a {
+        display: block;
+    }
+    .mobile-menu-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .nav .subnav {
+        width: 100%;
+        background: #333;
+        position: inherit;
+    }
+    .nav .subnav a {
+        color: #fff;
+        padding: 0 32px;
+    }
+    /* #content .member-list {
+        margin-top: 32px;
+    }
+    #content .member-item {
+        margin-top: 24px;
+    } */
+    #content .member-avt {
+        width: 60%;
+        /* Phải xét % vì tùy theo kích thước điện thoại hiển thị */
+    }
+    /* #content .place-list {
+        margin-top: 16px;
+    } */
+    /* #content .place-item {
+        margin-top: 28px;
+    } */
+    .contact-form {
+        line-height: 1.8;
+    }
+}

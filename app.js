@@ -57,3 +57,56 @@ for(let i = 0; i < menuItems.length; i++) {
         }
     }
 }
+
+var currIndex = 0;
+var sliders = $('.sliders');
+var slider;
+var htmls;
+var sliderLength;
+
+const app = {
+    sliderList: [
+        {
+            heading: "Chicago",
+            desc: "Thank you, Chicago - A right we won't forget",
+            image: "./assets/img/slider/chicago.jpg",
+        },
+        {
+            heading: "Los Angeles",
+            desc: "We had the best time playing at Venice Beach!",
+            image: "./assets/img/slider/la.jpg",
+        },
+        {
+            heading: "New York",
+            desc: "The atmosphere in New York is lorem ipsum.",
+            image: "./assets/img/slider/ny.jpg",
+        }
+    ],
+    render: function() {
+        htmls = `
+                <div id="slider" style="background: url(${slider.image}) top center / cover no-repeat;">
+                    <div class="text-content">
+                        <h2 class="text-heading">${slider.heading}</h2>
+                        <div class="text-desc">${slider.desc}</div>
+                    </div>
+                </div>
+            `
+        sliders.innerHTML = htmls
+    },
+    firstSlide: function() {
+        slider = this.sliderList[currIndex]
+        app.render()
+    },
+    playSlider: function() {
+        if(currIndex < sliderLength) {
+            currIndex++;
+        } else {
+            currIndex = 0
+        }
+        slider = app.sliderList[currIndex]
+        app.render()
+    },
+}
+sliderLength = app.sliderList.length-1;
+app.firstSlide()
+setInterval(app.playSlider, 4000)
